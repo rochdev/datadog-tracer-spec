@@ -25,9 +25,9 @@ Binary propagation is done using [Protocol Buffers Version 3](https://developers
 syntax = "proto3";
 
 message TracerState {
-  string trace_id = 1;
-  string span_id = 2;
-  bool   sampled = 3;
-  map<string, string> baggage = 4;
+  fixed64 trace_id = 1;
+  fixed64 span_id = 2;
+  bool    sampled = 3;
+  map<string, string> baggage_items = 4;
 }
 ```
